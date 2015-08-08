@@ -8,6 +8,12 @@ class CySmart:
         'CMD_INIT_BLE_STACK':binascii.unhexlify("07FC"),
         'CMD_START_SCAN':binascii.unhexlify("93FE"),
         'CMD_STOP_SCAN':binascii.unhexlify("94FE")
+        'CMD_ESTABLISH_CONNECTION':binascii.unhexlify("97FE")
+        'CMD_TERMINATE_CONNECTION':binascii.unhexlify("98FE")
+        'CMD_EXCHANGE_GATT_MTU_SIZE':binascii.unhexlify("12FE")
+        'CMD_READ_USING_CHARACTERISTIC_UUID':binascii.unhexlify("07FE")
+        'CMD_FIND_INCLUDED_SERVICES':binascii.unhexlify("02FE")
+        'CMD_DISCOVER_ALL_CHARACTERISTICS':binascii.unhexlify("03FE")
     }
     
     
@@ -15,6 +21,8 @@ class CySmart:
     EVT_SCAN_PROGRESS_RESULT = binascii.unhexlify("8A06")
     EVT_COMMAND_STATUS =  binascii.unhexlify("7E04")
     
+    
+    CMD_ESTABLISH_CONNECTION:binascii.unhexlify("A1FE")
 
     def __init__(self, ComPort='\\.\COM6'):
         self.serin = serial.Serial(ComPort, 115200, timeout=1)
@@ -55,7 +63,13 @@ class CySmart:
                             nm_length=  int(self.hexArray(data_set.split('\t')[0])[-1],16)-1
                             Ble['name'] = data_set.split('\t')[1][0:nm_length]
         return Ble
-    
+    def openConection(self,address):
+        
+        ads = "".join("{:s}".format(c) for c in address)
+        ads = self.Commands['CMD_ESTABLISH_CONNECTION'] +"0700"+ ads
+        print self.sendCommand(ads)
+        
+        
     def close(self):
         self.serin.close()
         
