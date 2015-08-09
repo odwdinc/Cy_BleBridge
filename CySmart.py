@@ -74,10 +74,11 @@ class CySmart:
                 if len(message) > 4:
                 # have message                   
                     event, command = unpack('2s2s', message[0:4])
-                    body = message[4:]
-                    if event not in payloads:
-                         payloads[event] = []      
-                    payloads[event].append(body)
+                    if event not in self.EVT_COMMAND_STATUS and event not in self.EVT_COMMAND_COMPLETE:
+                        body = message[4:]
+                        if event not in payloads:
+                             payloads[event] = []      
+                        payloads[event].append(body)
             else:
                 time.sleep(.1)
         return payloads
@@ -144,7 +145,14 @@ class CySmart:
     def Read_Characteristic_Value(self,Attribute):
         cmd = self.Commands['CMD_READ_CHARACTERISTIC_VALUE']
         cmd += pack('H H H',*(cy.Flag_API_RETURN, cy.Flag_API_RETURN, Attribute ))
-        return self.sendCommand(cmd,footer=False)
+        Response = self.sendCommand(cmd,footer=False)
+        #event, rest = Response[0:3], Response[4:]
+        out_Response = []
+        if self.EVT_READ_CHARACTERISTIC_VALUE_RESPONSE in Response:
+                for cs in  Response[self.EVT_READ_CHARACTERISTIC_VALUE_RESPONSE]:
+                    out_Response.append(cs[4:])
+                    
+        return out_Response
     
     def Read_All_characteristics(self):
         data_set = {0x0003:{},
@@ -160,10 +168,7 @@ class CySmart:
                     0x0022:{}
                     }
         for se in data_set:
-            Characteristic_Value = self.Read_Characteristic_Value(se)
-            
-            if self.EVT_READ_CHARACTERISTIC_VALUE_RESPONSE in Characteristic_Value:
-                data_set[se] = Characteristic_Value[self.EVT_READ_CHARACTERISTIC_VALUE_RESPONSE]
+            data_set[se] = self.Read_Characteristic_Value(se)
         return data_set
     
     def Initiate_Pairing(self):
@@ -189,6 +194,7 @@ if cy.EVT_SCAN_PROGRESS_RESULT in cyd:
     allcs =  cy.Read_All_characteristics()
     for cs in allcs:
         print cy.hexPrint(cs), allcs[cs]
+    print cy.Read_Characteristic_Value(0x1F) 
     cy.close_Conection()
 else:
      print "nothing found:"
