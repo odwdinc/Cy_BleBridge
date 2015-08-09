@@ -1,0 +1,33 @@
+4359 99FE 0200 0400 												'Initiate Pairing' request sent
+	BDA7 0600 7E04 99FE 0000
+	BDA7 0700 0404 2900 0100 01 										'Misc Event Notification' received
+																		Event Code: 0x0029 (GAP_ENCRYPT_CHANGE)
+																		Event Data: Encryption ON
+																		Event Data: [01]
+	BDA7 1600 0404 2C00 1000 0A2DF465E3BD7B491EB4C09595134673 		'Misc Event Notification' received
+																		Event Code: 0x002C
+																		Event Data: [0A:2D:F4:65:E3:BD:7B:49:1E:B4:C0:95:95:13:46:73]
+																			Info: gpm.M1115: Pairing with BLE GamePad [00:A0:50:05:2A:1D] completed successfully.
+
+	BDA7 0600 7F04 99FE 0000
+
+
+4359 8FFE 0000 								'Get Whitelist' request sent
+	BDA7 0600 7E04 8FFE 0000
+	BDA7 0B00 8906 8FFE 1D2A0550A00000 		'Get Whitelist Response' event received
+												Whitelist Item 1:
+												------------------------
+												BD Address Type: PUBLIC_ADDRESS
+												BD Address: 1D:2A:05:50:A0:00:00:00
+	BDA7 0600 7F04 8FFE 0000
+
+
+
+4359 9EFE 0000 								'Get Bonded Devices List' request sent
+	BDA7 0600 7E04 9EFE 0000
+	BDA7 0B00 9506 9EFE 1D2A0550A00000 		'Get Bonded Devices List Response' event received
+												Bonded Device 1:
+												------------------------
+												BD Address Type: PUBLIC_ADDRESS
+												BD Address: 1D:2A:05:50:A0:00:00:00
+	BDA7 0600 7F04 9EFE 0000

@@ -1,0 +1,6 @@
+435906FE040004001F00								'Read Characteristic Value' request sent
+														Attribute Handle: 0x001F
+BDA7 0600 7E04 06FE 0000
+BDA7 0F00 0606 06FE 0400 0700 02B40405000100			'Read Characteristic Value Response' event received
+														Value: [02:B4:04:05:00:01:00]
+BDA7 0600 7F04 06FE 0000

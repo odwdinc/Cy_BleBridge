@@ -1,0 +1,231 @@
+4359 00FE 0200 0400 															'Discover All Primary Services' request sent
+	BDA7 0600 7E04 00FE 0000
+	BDA7 1B00 0006 00FE 0400 0100070001001808000B000101180C001800011218			'Discover All Primary Services Result Progress' event received
+																					Primary Service 1:
+																					------------------------
+																					Start Handle: 0x0001
+																					End Handle: 0x0007
+																					UUID: 0x1800
+																					Primary Service 2:
+																					------------------------
+																					Start Handle: 0x0008
+																					End Handle: 0x000B
+																					UUID: 0x1801
+																					Primary Service 3:
+																					------------------------
+																					Start Handle: 0x000C
+																					End Handle: 0x0018
+																					UUID: 0x1812
+
+	BDA7 1400 0006 00FE 0400 19001F00010A1820002400010F18						'Discover All Primary Services Result Progress' event received
+																					Primary Service 1:
+																					------------------------
+																					Start Handle: 0x0019
+																					End Handle: 0x001F
+																					UUID: 0x180A
+																					Primary Service 2:
+																					------------------------
+																					Start Handle: 0x0020
+																					End Handle: 0x0024
+																					UUID: 0x180F
+	BDA7 0600 7F04 00FE 0000
+
+
+4359 02FE 0600 0400 01000700 						'Find Included Services' request sent
+														Start Handle: 0x0001
+														End Handle: 0x0007
+	BDA7 0600 7E04 02FE 0000
+	BDA7 0600 7F04 02FE 0000
+
+
+4359 02FE 0600 0400 08000B00  						'Find Included Services' request sent
+														Start Handle: 0x0008
+														End Handle: 0x000B
+	BDA7 0600 7E04 02FE 0000
+	BDA7 0600 7F04 02FE 0000
+
+
+4359 02FE 0600 0400 0C001800 						'Find Included Services' request sent
+														Start Handle: 0x000C
+														End Handle: 0x0018
+	BDA7 0600 7E04 02FE 0000
+	BDA7 0600 7F04 02FE 0000
+
+
+4359 02FE 0600 0400 19001F00 						'Find Included Services' request sent
+														Start Handle: 0x0019
+														End Handle: 0x001F
+	BDA7 0600 7E04 02FE 0000
+	BDA7 0600 7F04 02FE 0000
+
+
+4359 02FE 0600 0400 20002400 						'Find Included Services' request sent
+														Start Handle: 0x0020
+														End Handle: 0x0024
+	BDA7 0600 7E04 02FE 0000
+	BDA7 0600 7F04 02FE 0000
+
+
+4359 03FE 0600 0400 01000700 															'Discover All Characteristics' request sent
+																							Start Handle: 0x0001
+																							End Handle: 0x0007
+	BDA7 0600 7E04 03FE 0000
+	BDA7 1E00 0306 03FE 0400 020002030001002A040002050001012A060002070001042A 			'Discover All Characteristics Result Progress' event received
+																							Characteristic 1:
+																							--------------------------
+																							Attribute Handle: 0x0002
+																							Characteristic Value Handle: 0x0003
+																							UUID: 0x2A00
+																							Properties: 0x2
+																							Characteristic 2:
+																							--------------------------
+																							Attribute Handle: 0x0004
+																							Characteristic Value Handle: 0x0005
+																							UUID: 0x2A01
+																							Properties: 0x2
+																							Characteristic 3:
+																							--------------------------
+																							Attribute Handle: 0x0006
+																							Characteristic Value Handle: 0x0007
+																							UUID: 0x2A04
+																							Properties: 0x2
+		BDA7 0600 7F04 03FE 0000
+
+
+4359 03FE 0600 0400 08000B00 							'Discover All Characteristics' request sent
+	 							 							Start Handle: 0x0008
+	 							 							End Handle: 0x000B
+	BDA7 0600 7E04 03FE 0000
+	BDA7 0E00 0306 03FE 0400 0900220A0001052A 			'Discover All Characteristics Result Progress' event received
+	 							 							Characteristic 1:
+	 							 							--------------------------
+	 							 							Attribute Handle: 0x0009
+	 							 							Characteristic Value Handle: 0x000A
+	 							 							UUID: 0x2A05
+	 							 							Properties: 0x22
+	BDA7 0600 7F04 03FE 0000
+
+
+4359 05FE 0600 0400 0B000B00 						'Discover All Characteristic Descriptors' request sent
+	 							 						Start Handle: 0x000B
+	 							 						End Handle: 0x000B
+	BDA7 0600 7E04 05FE 0000
+	BDA7 0B00 0506 05FE 04000 B00010229 			'Discover All Characteristic Descriptors Result Progress' event received
+	 							 						Characteristic Descriptor 1:
+	 							 						-------------------------------------
+	 							 						Attribute Handle: 0x000B
+	 							 						UUID: 0x2902
+	BDA7 0600 7F04 05FE 0000
+
+
+4359 03FE 0600 0400 0C001800 															'Discover All Characteristics' request sent
+																							Start Handle: 0x000C
+																							End Handle: 0x0018
+	BDA7 0600 7E04 03FE 0000
+	BDA7 1E00 0306 03FE 0400 0D00020E00014B2A0F001A1000014D2A1300021400014A2A			'Discover All Characteristics Result Progress' event received
+																						  	Characteristic 1:
+																						  	--------------------------
+																						 	Attribute Handle: 0x000D
+																						  	Characteristic Value Handle: 0x000E
+																						  	UUID: 0x2A4B
+																						  	Properties: 0x2
+																						  	Characteristic 2:
+																						  	--------------------------
+																						  	Attribute Handle: 0x000F
+																						  	Characteristic Value Handle: 0x0010
+																						  	UUID: 0x2A4D
+																						  	Properties: 0x1A
+																						  	Characteristic 3:
+																						  	--------------------------
+																						  	Attribute Handle: 0x0013
+																						  	Characteristic Value Handle: 0x0014
+																						  	UUID: 0x2A4A
+																						  	Properties: 0x2
+
+																						 
+	BDA7 1600 0306 03FE 0400 1500041600014C2A1700061800014E2A							'Discover All Characteristics Result Progress' event received
+																						 	Characteristic 1:
+																						  	--------------------------
+																						  	Attribute Handle: 0x0015
+																						  	Characteristic Value Handle: 0x0016
+																						  	UUID: 0x2A4C
+																						  	Properties: 0x4
+																						  	Characteristic 2:
+																						  	--------------------------
+																						  	Attribute Handle: 0x0017
+																						  	Characteristic Value Handle: 0x0018
+																						  	UUID: 0x2A4E
+																						  	Properties: 0x6
+	BDA7 0600 7F04 03FE 0000
+
+
+4359 05FE 0600 0400 11001200  							'Discover All Characteristic Descriptors' request sent
+															Start Handle: 0x0011
+															End Handle: 0x0012
+	BDA7 0600 7E04 05FE 0000
+	BDA7 1000 0506 05FE 0400 11000102291200010829		'Discover All Characteristic Descriptors Result Progress' event received
+														 	Characteristic Descriptor 1:
+														 	-------------------------------------
+														 	Attribute Handle: 0x0011
+														 	UUID: 0x2902
+														 	Characteristic Descriptor 2:
+														 	-------------------------------------
+														 	Attribute Handle: 0x0012
+														 	UUID: 0x2908
+	BDA7 0600 7F04 05FE 0000
+
+
+4359 03FE 0600 0400 19001F00 														'Discover All Characteristics' request sent
+																						Start Handle: 0x0019
+																						End Handle: 0x001F
+	BDA7 0600 7E04 03FE 0000
+	BDA7 1E00 0306 03FE 0400 1A00021B0001292A1C00021D0001262A1E00021F0001502A 		'Discover All Characteristics Result Progress' event received
+																					 	Characteristic 1:
+																					 	--------------------------
+																					 	Attribute Handle: 0x001A
+																					 	Characteristic Value Handle: 0x001B
+																					 	UUID: 0x2A29
+																					 	Properties: 0x2
+																					 	Characteristic 2:
+																					 	--------------------------
+																					 	Attribute Handle: 0x001C
+																					 	Characteristic Value Handle: 0x001D
+																					 	UUID: 0x2A26
+																					 	Properties: 0x2
+																					 	Characteristic 3:
+																					 	--------------------------
+																					 	Attribute Handle: 0x001E
+																					 	Characteristic Value Handle: 0x001F
+																					 	UUID: 0x2A50
+																					 	Properties: 0x2
+	BDA7 0600 7F04 03FE 0000
+
+
+4359 03FE 0600 0400 20002400 						'Discover All Characteristics' request sent
+														Start Handle: 0x0020
+														End Handle: 0x0024
+	BDA7 0600 7E04 03FE 0000
+	BDA7 0E00 0306 03FE 0400 210012220001192A 		'Discover All Characteristics Result Progress' event received
+														Characteristic 1:
+														--------------------------
+														Attribute Handle: 0x0021
+														Characteristic Value Handle: 0x0022
+														UUID: 0x2A19
+														Properties: 0x12
+	BDA7 0600 7F04 03FE 0000
+
+
+4359 05FE 0600 0400 23002400 								'Discover All Characteristic Descriptors' request sent
+																Start Handle: 0x0023
+																End Handle: 0x0024
+	BDA7 0600 7E04 05FE 0000
+	BDA7 1000 0506 05FE 0400 23000104292400010229 			'Discover All Characteristic Descriptors Result Progress' event received
+																Characteristic Descriptor 1:
+																-------------------------------------
+																Attribute Handle: 0x0023
+																UUID: 0x2904
+																Characteristic Descriptor 2:
+																-------------------------------------
+																Attribute Handle: 0x0024
+																UUID: 0x2902
+	BDA7 0600 7F04 05FE 0000

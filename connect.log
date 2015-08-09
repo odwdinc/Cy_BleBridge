@@ -1,0 +1,39 @@
+4359 A1FE 0700 1D2A0550A00000	'Resolve and Set Peer Device BD Address' request sent
+									BD Address Type: PUBLIC_ADDRESS
+									BD Address: 1D:2A:05:50:A0:00:00:00
+
+	BDA7 0600 7E04 A1FE 0000
+	BDA7 0500 9806 A1FE 01		'Resolve and Set Peer Device BD Address Response' event received
+									Status: 0x01
+	BDA7 0600 7F04 A1FE 0000
+
+4359 97FE 0700 1D2A0550A00000 			'Establish Connection' request sent
+											BD Address Type: PUBLIC_ADDRESS
+											BD Address: 1D:2A:05:50:A0:00:00:00
+	BDA7 0600 7E04 97FE 0000
+	BDA7 0600 8F06 97FE 0400				'Establish Connection Response' event received
+	BDA7 0B00 8406 0400 00070000000A00		'Current Connection Parameters' event received
+												HCI Status: 0x00
+												Connection Interval: 8.75 ms
+												Slave Latency: 0
+												Supervision Timeout: 100 ms
+	BDA7 0600 7F04 97FE 0000
+
+4359 12FE 0400 04000002 				'Exchange GATT MTU Size' request sen
+											MTU: 0x0200
+	BDA7 0600 7E04 12FE 0000
+	BDA7 0800 0F06 12FE 0400 1700		'Exchange GATT MTU Size Response' event received
+											MTU: 0x0017
+	BDA7 0600 7F04 12FE0000
+
+4359 07FE 0900 0400 01002A0100FFFF								'Read using Characteristic UUID' request sent
+																	Start Handle: 0x0001
+																	End Handle: 0xFFFF
+																	UUID: 0x2A00
+	BDA7 0600 7E04 07FE 0000
+	BDA7 1500 0706 07FE 0400 03000B00424C452047616D65506164		'Read using Characteristic UUID Response' event received
+																		Characteristic value 1:
+																		--------------------------------
+																		Attribute Handle: 0x0003
+																		Value: [42:4C:45:20:47:61:6D:65:50:61:64]
+	BDA7 0600 7F04 07FE 0000

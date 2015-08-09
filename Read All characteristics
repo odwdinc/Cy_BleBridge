@@ -1,0 +1,94 @@
+4359 06FE  0400  04000300 										'Read Characteristic Value' request sent
+																	Attribute Handle: 0x0003
+	BDA7 0600 7E04 06FE 0000
+	BDA7 1300 0606 06FE 0400 0B00 424C452047616D65506164 		'Read Characteristic Value Response' event received
+																	Value: [42:4C:45:20:47:61:6D:65:50:61:64]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE  0400 04000500 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x0005
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0A00 0606 06FE 0400 0200 C403 	 		'Read Characteristic Value Response' event received
+													Value: [C4:03]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04000700 								'Read Characteristic Value' request sent
+															Attribute Handle: 0x0007
+	BDA7 0600 7E04 06FE 0000
+	BDA7 1000 0606 06FE 0400 0800 080008001900C800 		'Read Characteristic Value Response' event received
+															Value: [08:00:08:00:19:00:C8:00]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04000A00 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x000A
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0C00 0606 06FE 0400 0400 00000000 		'Read Characteristic Value Response' event received
+													Value: [00:00:00:00]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04000E00 														'Read Characteristic Value' request sent
+																					Attribute Handle: 0x000E
+	BDA7 0600 7E04 06FE 0000
+	BDA7 1E00 0606 06FE 0400 1600 05010905A10185010901A100093009311581257F7508 	'Read Characteristic Value Response' event received
+																					Value: [05:01:09:05:A1:01:85:01:09:01:A1:00:09:30:09:31:15:81:25:7F:75:08]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001000 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x0010
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0C00 0606 06FE 0400 0400 00000000 	 	'Read Characteristic Value Response' event received
+													Value: [00:00:00:00]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001400 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x0014
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0C00 0606 06FE 0400 0400 01010003 		'Read Characteristic Value Response' event received
+													Value: [01:01:00:03]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001800 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x0018
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0900 0606 06FE 0400 0100 01 			'Read Characteristic Value Response' event received
+													Value: [01]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001B00 														'Read Characteristic Value' request sent
+																					Attribute Handle: 0x001B
+	BDA7 0600 7E04 06FE 0000
+	BDA7 1D00 0606 06FE 0400 1500 437970726573732053656D69636F6E647563746F72 		'Read Characteristic Value Response' event received
+																					Value: [43:79:70:72:65:73:73:20:53:65:6D:69:63:6F:6E:64:75:63:74:6F:72]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001D00 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x001D
+	BDA7 0600 7E04 06FE 0000 
+	BDA7 0C00 0606 06FE 0400 0400 312E3030 		'Read Characteristic Value Response' event received
+													Value: [31:2E:30:30]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04001F00 							'Read Characteristic Value' request sent
+														Attribute Handle: 0x001F
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0F00 0606 06FE 0400 0700 02B40405000100 	'Read Characteristic Value Response' event received
+														Value: [02:B4:04:05:00:01:00]
+	BDA7 0600 7F04 06FE 0000
+
+
+4359 06FE 0400 04002200 						'Read Characteristic Value' request sent
+													Attribute Handle: 0x0022
+	BDA7 0600 7E04 06FE 0000
+	BDA7 0900 0606 06FE 0400 0100 64 			'Read Characteristic Value Response' event received
+													Value: [64]
+	BDA7 0600 7F04 06FE 0000

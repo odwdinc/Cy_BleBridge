@@ -1,0 +1,103 @@
+4359 07FC 0000 						#Init BLE Stack
+	BDA7 0600 7E04 07FC 0000  		# 'Command Status' event received  Status: BLE_STATUS_OK
+ 	BDA7 0600 7F04 07FC 0000  		# 'Command Complete' event received Status: BLE_STATUS_OK
+
+
+
+
+4359 0CFC 0000 						# Get BLE Stack Version
+	BDA7 0600 7E04 0CFC 0000 		'Command Status' event received Status: BLE_STATUS_OK
+	BDA7 0800 0304 0CFC 0200 0051 	'Get BLE Stack Version Response' event received BLE Stack Version: 2.0.0.81
+	BDA7 0600 7F04 0CFC 0000 		'Command Complete' event received Status: BLE_STATUS_OK
+
+4359 8FFE 0000 						# Get Whitelist
+	BDA7 0600 7E04 8FFE0000 		'Command Status' event received Status: BLE_STATUS_OK
+	BDA7 0400 8906 8FFE 			'Get Whitelist Response' event received
+	BDA7 0600 7F04 8FFE 0000        'Command Complete' event received Status: BLE_STATUS_OK
+
+4359 82FE 0100 01 							#'Get Bonded Devices List' request sent 
+	BDA7 0600 7E04 82FE 0000  				'Command Status' event received Status: BLE_STATUS_OK
+	BDA7 0B00 8106 82FE 91951929499901		'Get Local BD Address Response' event received
+											 BD Address Type: RANDOM_ADDRESS
+											 BD Address: 91:95:19:29:49:99:00:00
+	BDA7 0600 7F04 82FE 0000 				'Command Complete' event received Status: BLE_STATUS_OK
+
+4359 9EFE 0000 						#'Get Local Device BD Address' request sent
+	BDA7 0600 7E04 9EFE 0000 		'Command Status' event received Status: BLE_STATUS_OK
+	BDA7 0400 9506 9EFE
+	BDA7 0600 7F04 9EFE 0000
+
+4359 82FE 0100 00
+	BDA7 0600 7E04 82FE 0000
+	BDA7 0B00 8106 82FE 32100C50A00000 		'Get Local BD Address Response' event received
+											BD Address Type: PUBLIC_ADDRESS
+											BD Address: 32:10:0C:50:A0:00:00:00
+
+	BDA7 0600 7F04 82FE 0000
+
+4359 80FE 0100 04					#Set Device IO Capabilities
+										IO Capabilities: KEYBOARD_AND_DISPLAY
+	BDA7 0600 7E04 80FE 0000
+	BDA7 0600 7F04 80FE 0000
+
+4359 8BFE 0B00 0001100010000000000001		'Set Scan Parameters' request sent
+											Scan Type: ACTIVE_SCAN
+											Scan Interval: 10.00 ms
+											Scan Window: 10.00 ms
+											Local BD Address Type: PUBLIC_ADDRESS
+											Scan Procedure Type: OBSERVATION_PROCEDURE
+											Scan Filter Policy: 0x00
+											Duplicate Filter Policy: ENABLE_DUPLICATE_FILTERING
+											Scan Timeout: Continuous
+	BDA7 0600 7E04 8BFE 0000
+	BDA7 0600 7F04 8BFE 0000
+
+4359 89FE 1900 100010000000000000000000000600080000000A0000000000  		#'Set Connection Parameters' request sent
+																		
+																		Connection Interval Minimum: 7.50 ms
+																		Connection Interval Maximum: 10.00 ms
+																		Slave Latency: 0
+																		Supervision Timeout: 100 ms
+																		Initiator Filter Policy: 0x00
+																		Local BD Address Type: PUBLIC_ADDRESS
+																		Connection CE Length Minimum: .00 ms
+																		Connection CE Length Maximum: .00 ms
+																		Connection Scan Interval: 10.00 ms
+																		Connection Scan Window: 10.00 ms
+
+
+
+	BDA7 0600 7E04 89FE 0000 
+	BDA7 0600 7F04 89FE 0000
+
+4359 8DFE 0400 11011000					#'Set Local Device Security' request sent
+										Security Level: 0x11
+	BDA7 0600 7E04 8DFE 0000 
+	BDA7 0600 7F04 8DFE 0000
+
+4359 81FE 0000 							#'Get Device IO Capabilities'
+	BDA7 0600 7E04 81FE 0000
+	BDA7 0500 8006 81FE 04    			'Get Device IO Capabilities Response' event received 
+										IO Capabilities: KEYBOARD_AND_DISPLAY
+	BDA7 0600 7F04 81FE 0000
+
+4359 8AFE 0000 										'Get Scan Parameters'request sent
+	BDA7 0600 7E04 8AFE 0000
+	BDA7 0F00 8606 8AFE 0001100010000000000001		'Get Scan Parameters Response' event received
+													Scan Type: ACTIVE_SCAN
+													Scan Interval: 10.00 ms
+													Scan Window: 10.00 ms
+													Local BD Address Type: PUBLIC_ADDRESS
+													Scan Procedure Type: OBSERVATION_PROCEDURE
+													Scan Filter Policy: 0x00
+													Duplicate Filter Policy: ENABLE_DUPLICATE_FILTERING
+													Scan Timeout: Continuous
+	BDA7 0600 7F04 8AFE 0000
+
+4359 88FE 0000
+	BDA7 0600 7E04 88FE 0000
+	BDA7 1D00 8506 88FE 100010000000000000000000000600080000000A0000000000
+	BDA7 0600 7F04 88FE 0000
+
+4359 8CFE 0000
+	BDA7 0600 
