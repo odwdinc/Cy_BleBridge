@@ -16,7 +16,8 @@ class CySmart:
         'CMD_READ_CHARACTERISTIC_VALUE':binascii.unhexlify("06FE"),
         'CMD_READ_USING_CHARACTERISTIC_UUID':binascii.unhexlify("07FE"),
         'CMD_FIND_INCLUDED_SERVICES':binascii.unhexlify("02FE"),
-        'CMD_DISCOVER_ALL_CHARACTERISTICS':binascii.unhexlify("03FE")
+        'CMD_DISCOVER_ALL_CHARACTERISTICS':binascii.unhexlify("03FE"),
+        'CMD_INITIATE_PAIRING_REQUEST':binascii.unhexlify("99FE")
     }
     
     
@@ -165,6 +166,11 @@ class CySmart:
                 data_set[se] = Characteristic_Value[self.EVT_READ_CHARACTERISTIC_VALUE_RESPONSE]
         return data_set
     
+    def Initiate_Pairing(self):
+        cmd = self.Commands['CMD_INITIATE_PAIRING_REQUEST']
+        cmd += pack('H H',*(cy.Flag_IMMEDIATE_RESPONSE, cy.Flag_API_RETURN ))
+        return self.sendCommand(cmd,footer=False)
+            
     def close(self):
         self.serin.close()
         
@@ -179,9 +185,11 @@ if cy.EVT_SCAN_PROGRESS_RESULT in cyd:
     client = cy.getScanData(cyd)
     print client['name']
     cy.openConection(client['address'])
+    cy.Initiate_Pairing()
     allcs =  cy.Read_All_characteristics()
     for cs in allcs:
         print cy.hexPrint(cs), allcs[cs]
     cy.close_Conection()
-    
+else:
+     print "nothing found:"
 cy.close()
