@@ -1,0 +1,5 @@
+4359 0BFE 0A00 0300 0E00 0400 01020304				'Write Characteristic Value' request sent
+													Attribute Handle: 0x000E
+													Value: [01:02:03:04]
+	BDA7 0600 7E04 0BFE 0000
+	BDA7 0600 7F04 0BFE 0000
