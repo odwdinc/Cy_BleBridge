@@ -1,19 +1,19 @@
 4359 93FE 0000 																					'Start Scan' request sent
 	BDA7 0600 7E04 93FE 0000
-	BDA7 2600 8A06 93FE 001D2A0550A00000DB180201060C09424C452047616D65506164070312180A180F18	#'Scan Progress Result' event received
+	BDA7 2600 8A06 93FE 001D2A0550A000 00DB 18 0201060C09424C452047616D65506164070312180A180F18	#'Scan Progress Result' event received
 																								Discovered Item 1:
 																								Advertisement Event Type: Connectable undirected
 																								BD Address Type: PUBLIC_ADDRESS
-																								BD Address: 1D:2A:05:50:A0:00:00:00
+																								BD Address: 1D:2A:05:50:A0:00
 																								Advertisement Event Data: 02:01:06:0C:09:42:4C:45:20:47:61:6D:65:50:61:64:07:03:12:18:0A:18:0F:18
 																								RSSI: -37 dBm
 
 
-	BDA7 0E00 8A06 93FE 04 1D2A0550A00000DB00													#'Scan Progress Result' event received
+	BDA7 0E00 8A06 93FE 04 1D2A0550A000 00DB 00													#'Scan Progress Result' event received
 																								Discovered Item 1:
 																								Advertisement Event Type: Scan response
 																								BD Address Type: PUBLIC_ADDRESS
-																								BD Address: 1D:2A:05:50:A0:00:00:00
+																								BD Address: 1D:2A:05:50:A0:00
 																								Advertisement Event Data: 
 																								RSSI: -37 dBm
 
